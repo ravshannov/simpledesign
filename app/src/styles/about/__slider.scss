@@ -1,0 +1,82 @@
+.slider{
+    height: 700px;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 20px;
+
+    @media (max-width:576px) {
+        height: 400px;
+        width: 95%;
+    }
+    &__title{
+        text-align: center;
+        font-family: $alt;
+        font-size: 40px;
+        font-weight: 600;
+        color: $black;
+        width: 600px;
+        margin: 60px auto;
+           
+        @media (max-width:650px){
+            width: 100%;
+            font-size: 30px;
+        }
+    }
+    &__inner{
+        width: 100%;
+        height: 100%;
+    }
+    &__item{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        transition: 0.5s;
+        opacity: 0;
+        &.active{
+            z-index: 1;
+            opacity: 1;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+    }
+    &__left, &__right{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 15%;
+        z-index: 100;
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+    &__left{
+        left: 0;
+        & i{
+            font-size: 41px;
+            color: #fff;
+            
+            &::after{
+                content: '\f053';
+            }
+        }
+    }
+    &__right{
+        right: 0;
+        & i{
+            font-size: 41px;
+            color: #fff;
+            
+            &::after{
+                content: '\f054';
+            }
+        }
+    }
+}

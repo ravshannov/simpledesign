@@ -1,0 +1,111 @@
+.header{
+
+    @media (max-width:992px) {
+        height: 80vh;
+    }
+    @media (max-width:576px) {
+        height: 600px;
+    }
+    &-content{
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &__title{
+        font-family: $alt;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 49px;
+        color: #fff;
+        width: 35%;
+        text-align: center;
+        margin-bottom: 42px;
+
+        @media (max-width:1200px){
+            width: 80%;
+        }
+        @media (max-width:992px){
+            width: 100%;
+            font-size: 35px;
+            line-height: 40px;
+        }
+        @media (max-width:576px) {
+            font-size: 25px;
+        }
+    }
+    &__btn{
+        padding: 28px 55px;
+        background-color: $gold;
+        border-radius: 100px;
+        border: none;
+        font-family: $alt;
+        font-weight: 600;
+        font-size: 20px;
+        color: #fff;
+        &:hover{
+            background-color: #fff;
+            color: $gold;
+        }
+        @media (max-width:768px){
+            padding: 15px 30px;
+        }
+    }
+}
+.header{
+    &__deliver{
+        height: 120px;
+        width: 370px;
+        box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.05);
+        border-radius: 100px;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        right: -220px;
+        top: 20%;
+        padding: 30px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        z-index: 1;
+        transition: .3s;
+        cursor: pointer;
+        &:hover{
+            right: -100px;
+        }
+        @media (max-width:1200px){
+            padding: 20px 30px;
+            height: 85px;
+        }
+        @media (max-width:992px){
+            padding: 15px 20px;
+            height: 75px;
+            width: 320px;
+        }
+
+        &-icon{
+            font-size: 24px;
+            color: $black;
+            &::after{
+                content: "\f290";
+            }
+        }
+        &-text{
+            font-family: $alt;
+            font-weight: 500;
+            font-size: 20px;
+            color: #fff;
+        }
+        &-bg{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #fff;
+            margin-left: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+}

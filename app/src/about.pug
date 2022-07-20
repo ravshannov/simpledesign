@@ -1,0 +1,13 @@
+doctype html
+html(lang="en")
+    include views/layout/head.pug
+    body 
+        header 
+            include views/layout/nav.pug
+        main 
+            include views/about/command.pug
+            include views/about/slider.pug
+            include views/about/video.pug
+        include views/layout/footer.pug
+
+        script(src="./js/common.min.js") 

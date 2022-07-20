@@ -1,0 +1,39 @@
+.deliver{
+    transform: translateY(-50%);
+    @media (max-width:576px) {
+        transform: translateY(-20%);
+    }
+    & .container{
+        background-color: #fff;
+        padding: 68px 75px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width:768px) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 18px 25px;
+        }
+    }
+    &__box{
+        width: 185px;
+        @media (max-width:576px) {
+            width: 90%;
+        }
+    }
+    &__title{
+        font-family: $alt;
+        font-weight: 700;
+        font-size: 25px;
+        color: $black;
+        margin-bottom: 5px;
+    }
+    &__text{
+        font-family: $alt;
+        font-weight: 500;
+        font-size: 20px;
+        color: $black;
+    }
+}
+

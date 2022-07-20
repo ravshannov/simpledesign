@@ -1,0 +1,227 @@
+.video{
+    background: #FAFAFA;
+    padding-bottom: 100px;
+    &__title{
+        text-align: center;
+        font-family: $alt;
+        font-size: 40px;
+        font-weight: 600;
+        color: $black;
+        width: 600px;
+        margin: 60px auto;
+
+        
+        @media (max-width:650px){
+            width: 100%;
+            font-size: 30px;
+        }
+
+    }
+    & .container{
+        position: relative;
+        overflow: hidden;
+        &:hover .video__media{
+            transform: translateY(0%);
+        }
+        
+
+    }
+    &__mp4{
+        width: 100%;
+        border-radius: 20px;
+        
+    }
+    &__speed-text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        font-weight: 500;
+        color: #F14635;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+    }
+    &__media{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 30px 15px;
+        margin: 0px 15px;
+        background-color: $gold;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transform: translateY(100%);
+        transition: 0.3s;
+        @media (max-width:768px){
+            padding: 15px;
+        }
+
+        @media (max-width:576px){
+            padding: 7px;
+        }
+
+    }
+    &-top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__start, &__end{
+        font-size: 25px;
+        font-weight: 500;
+        color: #fff;
+        @media (max-width:576px){
+            font-size: 20px;
+        }
+
+
+    }
+    &__line{
+        height: 10px;
+        flex-grow: 1;
+        background: #FFF;
+        margin:0 15px;
+        @media (max-width:576px){
+           height: 7px;
+        }
+
+
+    }
+    &__progress{
+        width: 0%;
+        height: 100%;
+        background-color: #F14635;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &__progress-ruler{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #F14635;
+        @media (max-width:576px){
+            height: 15px;
+            width: 15px;
+        }
+
+    }
+
+    &-bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        @media (max-width:576px){
+            margin-bottom: 5px;
+        }
+
+        & i{
+            color: #fff;
+            margin:0 10px;
+            font-size: 20px;
+            @media (max-width:576px){
+                font-size: 15px;
+                margin: 0 5px;
+            }
+    
+        }
+    }
+    &__icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__restart{
+
+        &::after{
+            content: "\f0e2";
+        }
+    }
+    &__prev-speed{
+
+        &::after{
+            content: "\f04a";
+        }
+    }
+    &__prev{
+
+        &::after{
+            content: "\f0d9";
+        }
+    }
+    &__play{
+
+        &::after{
+            content: "\f04b";
+        }
+        &.active{
+            &::after{
+                content: "\f04c";
+            }
+        }
+    }
+    &__next{
+
+        &::after{
+            content: "\f0da";
+        }
+    }
+    &__next-speed{
+
+        &::after{
+            content: "\f04e";
+        }
+    }
+    &__volume{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__volume-icon{
+        
+        &.mute{
+            &::after{
+                content: "\f2e2";
+            }
+        }
+        &.off{
+            &::after{
+                content: "\f6a9";
+            }
+        }
+        &.down{
+            &::after{
+                content: "\f027";
+            }
+        }
+        &.normal{
+            &::after{
+                content: "\f6a8";
+            }
+        }
+        &.up{
+            &::after{
+                content: "\f028";
+            }
+        }
+    }
+    &__volume-range{
+        @media (max-width:576px){
+            width: 100%;
+        }
+
+    }
+    &__screen{
+
+        &::after{
+            content: "\f065";
+        }
+    }
+}
